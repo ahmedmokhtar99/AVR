@@ -2,14 +2,21 @@
 /************************************************************************************/
 /**********************      AUTHOR: AHMED MOKHTAR       ****************************/
 /**********************      LAYER: MCAL                 ****************************/
-/**********************      SWC:TIMERS                  ****************************/
+/**********************      SWC:EXTI                    ****************************/
 /**********************      VERSION: 1.00               ****************************/
 /************************************************************************************/
 /************************************************************************************/
-#ifndef TIMERS_PRIVATE_H
-#define TIMERS_PRIVATE_H
+#ifndef EXTI_REGISER_H_
+#define EXTI_REGISER_H_
+#define GICR          *((volatile u8*)0x3D)
 
-#define NORMAL    1
-#define REVERSED  2
-#define CLEAR_MASK 0b11111000
+ #define GICR_INT0    0
+ #define GICR_INT1    1
+#define GIFR          *((volatile u8*)0x3C)
+#define MCUCR         *((volatile u8*)0x69)
+#define MCUCR_ISC00   0
+#define MCUCR_ISC01   1
+#define MCUCR_ISC10   2
+#define MCUCR_ISC11   3
+
 #endif

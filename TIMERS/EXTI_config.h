@@ -2,14 +2,28 @@
 /************************************************************************************/
 /**********************      AUTHOR: AHMED MOKHTAR       ****************************/
 /**********************      LAYER: MCAL                 ****************************/
-/**********************      SWC:TIMERS                  ****************************/
+/**********************      SWC:EXTI                    ****************************/
 /**********************      VERSION: 1.00               ****************************/
 /************************************************************************************/
 /************************************************************************************/
-#ifndef TIMERS_PRIVATE_H
-#define TIMERS_PRIVATE_H
+#ifndef EXTI_CONFIG_H_
+#define EXTI_CONFIG_H_
+/*OPTIONS
+      1-LOW_LEVEL
+  	  2-ON_CHANGE
+  	  3-FALLING_EDGE
+  	  4-RISING_EDGE
+ */
 
-#define NORMAL    1
-#define REVERSED  2
-#define CLEAR_MASK 0b11111000
+#define INT0_SENSE      	RISING_EDGE
+#define INT1_SENSE      	RISING_EDGE
+
+/*OPTIONS
+  	  1-ENABLE
+  	  2-DISABLE
+
+ */
+#define INT0_ENABLE_STATE     ENABLED
+#define INT1_ENABLE_STATE     ENABLED
+
 #endif
